@@ -12,7 +12,7 @@ export class ProjectsService {
     @InjectModel(Projects.name) private projectsModel: Model<ProjectsDocument>,
   ) {}
   
-  async createCourse(projectsData: any): Promise<any> {
+  async createProject(projectsData: any): Promise<any> {
     this.logger.log("Iniciando la creación...")
     const newProjects = await this.projectsModel.create(projectsData);
     return {status: true,
