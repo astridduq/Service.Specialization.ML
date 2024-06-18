@@ -1,0 +1,8 @@
+server:
+    port: 5000
+    timeout: 100000000
+    corsEnvironment: "0"
+    env: default
+    enableLog: true
+db:
+    mongoURI: 'mongodb+srv://nes164:3pT0gw9c77gzmj05@especializacionml.zwfyo6z.mongodb.net/especializacionML?retryWrites=true&w=majority&appName=especializacionML'
