@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsString, IsEmail, IsOptional, IsMongoId, IsArray } from 'class-validator';
 
-export class CreateTeacherDto {
+export class TeacherDto {
   @IsString()
   @IsNotEmpty()
   fullName: string;

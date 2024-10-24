@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { StudentsModule } from './student/student.module';
+import { StudentModule } from './student/student.module';
 import { CourseModule } from './course/course.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { ProjectsModule } from './projects/projects.module';
@@ -15,8 +15,8 @@ import { StudentController } from './student/student.controller';
 @Module({
   imports: [
     MongooseModule.forRoot(config.get('db.mongoURI'),{dbName:DatabaseConnection.ESPECIALIZACION_ML_ROOT}),
-  StudentsModule, CourseModule, TeacherModule, ProjectsModule, VideosModule, TeamsModule],
-  controllers: [AppController, StudentController],
+  StudentModule, CourseModule, TeacherModule, ProjectsModule, VideosModule, TeamsModule],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}

@@ -13,10 +13,10 @@ export class Teacher {
   email: string;
 
   @Prop()
-  cellphone: Date;
+  cellphone: string;
 
   @Prop()
-  course: Array<Course>;
+  course: Array<string>;
 
 }
 export type TeacherDocument = Teacher & Document;
