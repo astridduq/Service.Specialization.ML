@@ -10,12 +10,12 @@ import { TeamsModule } from './teams/teams.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import config = require('config');
 import { DatabaseConnection } from './enums/database.connection';
-import { StudentController } from './student/student.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot(config.get('db.mongoURI'),{dbName:DatabaseConnection.ESPECIALIZACION_ML_ROOT}),
-  StudentModule, CourseModule, TeacherModule, ProjectsModule, VideosModule, TeamsModule],
+  StudentModule, CourseModule, TeacherModule, ProjectsModule, VideosModule, TeamsModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

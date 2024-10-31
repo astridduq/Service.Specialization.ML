@@ -7,13 +7,19 @@ export class Student {
   _id?: Types.ObjectId;
 
   @Prop()
-  fullName: string;
+  name: string;
+
+  @Prop()
+  lastName: string;
+
+  @Prop()
+  idNumber: string;
 
   @Prop()
   email: string;
 
   @Prop()
-  dateOfBirth: Date;
+  birthDate: Date;
 
   @Prop()
   startDate: Date;
@@ -31,7 +37,7 @@ export class Student {
   password: string;
 
   @Prop()
-  genre: string;
+  gender: string;
 
   @Prop()
   payment: boolean
