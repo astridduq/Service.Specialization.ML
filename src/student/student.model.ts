@@ -31,6 +31,9 @@ export class Student {
   educationLevel: string;
 
   @Prop()
+  countryCode: string;
+
+  @Prop()
   cellphone: string;
 
   @Prop()

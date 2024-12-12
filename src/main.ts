@@ -6,7 +6,7 @@ import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.int
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const port = config.get('server.port') || 3000;
+  const port = config.get('server.port') || 5000;
 
   const corsOptions: CorsOptions = {
     origin: 'http://localhost:3000',
@@ -16,6 +16,7 @@ async function bootstrap() {
   };
 
   app.enableCors(corsOptions);
+  app.setGlobalPrefix('api');
   await app.listen(port);
   Logger.log(`Aplicación escuchando en el puerto ${port}`);
 }
